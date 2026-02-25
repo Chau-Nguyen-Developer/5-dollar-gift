@@ -3,3 +3,5 @@ To run Flask application: flask --app <app-name> run --debug
 (a http link will show up)
 Prompt to get help on jQuery: How to use jquery to ... (ex: add a new <li> and <ul> container.)
 How to use jquery to clear all the items under list <ul> 
+
+If want to have docs/index.html, this will go into index.html: 

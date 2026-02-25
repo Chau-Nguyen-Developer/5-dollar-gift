@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>5-Dollar Office Gift</title>
+        <link rel="stylesheet" href="style.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
             //1. User clicks on the search button -> Grab the budget value. 
@@ -54,12 +57,28 @@
     </head>
 
     <body>
-        <h2>Welcome to 5-Dollar Giftshop. Dedicated for office work.</h2>
-        <input type="text" id="budget_input">
-        <button onclick="search()">Search</button>
-        <ul id="result_list">
+  <div class="page">
+    <div class="shell">
 
-        </ul>
-    </body>
+      <div class="top">
+        <h2>Welcome to 5-Dollar Giftshop. Dedicated for office work.</h2>
+        <p class="subtitle">Enter a budget to see gift ideas.</p>
+      </div>
+
+      <div class="content">
+        <div class="search-row">
+          <input type="text" id="budget_input" placeholder="Enter budget">
+          <button onclick="search()">Search</button>
+        </div>
+
+        <div class="results">
+          <p class="results-title">Results</p>
+          <ul id="result_list"></ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
 
 </html>
