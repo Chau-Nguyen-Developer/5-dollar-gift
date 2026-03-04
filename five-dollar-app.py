@@ -95,6 +95,11 @@ except Exception as e:
 #         "image_url": "https://target.scene7.com/is/image/Target/GUEST_6b59a3bf-02bd-4442-aa55-c0cb0f4d6c54?wid=600&hei=600&qlt=80"
 #     },
 # ]
+
+for item in data:
+    collection.insert_one(item)
+print("Successfully import the list of items into database.")
+
 # @app.route('/search/<budget>')
 # def search_gift_items(budget):
 #     # The given budget is a string. We have to convert it to float data type. 
