@@ -11,3 +11,5 @@ Example prompt if don't know how to use a database:
 Show me a hello world example of using Python to interact with  
 MongoDB hosted in the cloud. Just show the basic read and write example.  
 Keep the example super simple and concise.  
+
+Ideas for later: able to search with name as well. Use regex? 
