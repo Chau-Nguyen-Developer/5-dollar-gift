@@ -2,8 +2,28 @@ To run preview HTML file on browswer: press fn key with F1 to trigger F1.
 To run Flask application: flask --app <app-name> run --debug 
 (a http link will show up)
 
-Apply changes locally, test locally, and then push to GitHub. 
+On AWS, run the application as a background process:
+Step 1:  
+nohup flask --app five_dollar_app run --host=0.0.0.0 --port=5000 > flask.log 2>&1 &
+(nohup: no hang up. > flask.log means send all normal output into a file called flask.log.  
+2>&1 means send error messages into the same place as normal output). Don't forget the & simple at the end,  
+as it indicates running in the background. 
+
+(other option: nohup python3.12 five_dollar_app.py > log.txt 2>&1)
+
+Step2 (optional): if want to apply remote changes in GH remote repo to repo on AWS,   
+have to kill the process first. Have to identify the process ID first, then kill, then apply changes, and then run again. 
+--> Check to see the PID: ps aux | grep flask 
+(or ps aux | grep python)
+--> Kill the process: sudo kill -9 <the PID>
+--> Apply changes on GH to AWS server: git pull --rebase
+--> Run the process again in the background 
+
+
+(Read above. Apply changes locally, test locally, and then push to GitHub. 
 Then go to AWS console, apply those change by the command: git pull --rebase
+
+
 
 Prompt to get help on jQuery: How to use jquery to ... (ex: add a new <li> and <ul> container.)
 How to use jquery to clear all the items under list <ul> 
