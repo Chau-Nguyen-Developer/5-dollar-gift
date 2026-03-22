@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            cd /home/ubuntu/5-dollar-gift
+            cd /home/ec2-user/5-dollar-gift
             git pull --rebase origin main
             pip install -r requirements.txt
             pkill -f five_dollar_app.py || true
