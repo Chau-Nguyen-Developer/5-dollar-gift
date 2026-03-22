@@ -36,6 +36,16 @@ Show me a hello world example of using Python to interact with
 MongoDB hosted in the cloud. Just show the basic read and write example.  
 Keep the example super simple and concise.  
 
+--------------------------------------
+For my Python Flask project, I can run it locally and also in AWS EC2.
+Now I need to configure a GitHub Action to enable the continuous integration.   
+Here are the basic command I do:
+- the app is located in user folder: 5-dollar-gift
+- run the app in the server, I use: 
+nohup flask --app five_dollar_app run --host=0.0.0.0 --port=5000 > flask.log 2>&1 &
+- I use git to get the code updated: 
+git pull --rebase
+
 Ideas for later: able to search with name as well. Use regex? 
 
 ## FIND ALL DOCUMENTS WHERE THE "PRICE" FIELD IS LESS THAN OR EQUAL TO BUDGET
