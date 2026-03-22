@@ -37,6 +37,6 @@ jobs:
           script: |
             cd /home/ec2-user/5-dollar-gift
             git pull --rebase origin main
-            python3 -m pip install -r requirements.txt
+            /usr/bin/python3.12 -m pip install -r requirements.txt
             pkill -f five_dollar_app.py || true
-            nohup python3 five_dollar_app.py > app.log 2>&1 < /dev/null &
+            nohup /usr/bin/python3.12 five_dollar_app.py > app.log 2>&1 < /dev/null &
